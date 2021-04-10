@@ -14,6 +14,7 @@ function Item({
   rightBtnLink,
   twoButtons,
   first,
+  id
 }) {
   return (
     <div
@@ -21,6 +22,7 @@ function Item({
       style={{
         backgroundImage: `url(${backgroundImg})`,
       }}
+      id={id}
     >
       <div className='item__container'>
         <div className='item__text'>

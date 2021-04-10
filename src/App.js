@@ -17,30 +17,6 @@ function App() {
       <Header />
       <div className='app__itemsContainer'>
         <Item
-          title='Model 3'
-          desc='Schedule a Touchless Test Drive'
-          descLink=''
-          backgroundImg={Model3}
-          leftBtnTxt='CUSTOM ORDER'
-          leftBtnLink=''
-          rightBtnTxt='EXISTING INVENTORY'
-          rightBtnLink=''
-          twoButtons='true'
-          car='car'
-          first
-        />
-        <Item
-          title='Solar and Powerwall'
-          desc='Power Everything'
-          descLink=''
-          backgroundImg={SolarPanels}
-          leftBtnTxt='LEARN MORE'
-          leftBtnLink=''
-          rightBtnTxt=''
-          rightBtnLink=''
-          twoButtons=''
-        />
-        <Item
           title='Model S'
           desc='Schedule a Touchless Test Drive'
           descLink=''
@@ -50,6 +26,22 @@ function App() {
           rightBtnTxt='EXISTING INVENTORY'
           rightBtnLink=''
           twoButtons='true'
+          car='car'
+          id="modelS"
+          first
+        />
+        
+        <Item
+          title='Model 3'
+          desc='Schedule a Touchless Test Drive'
+          descLink=''
+          backgroundImg={Model3}
+          leftBtnTxt='CUSTOM ORDER'
+          leftBtnLink=''
+          rightBtnTxt='EXISTING INVENTORY'
+          rightBtnLink=''
+          twoButtons='true'
+          id='model3'
         />
         <Item
           title='Model X'
@@ -61,6 +53,7 @@ function App() {
           rightBtnTxt='EXISTING INVENTORY'
           rightBtnLink=''
           twoButtons='true'
+          id='modelX'
         />
         <Item
           title='Model Y'
@@ -72,6 +65,19 @@ function App() {
           rightBtnTxt='EXISTING INVENTORY'
           rightBtnLink=''
           twoButtons='true'
+          id='modelY'
+        />
+        <Item
+          title='Solar and Powerwall'
+          desc='Power Everything'
+          descLink=''
+          backgroundImg={SolarPanels}
+          leftBtnTxt='LEARN MORE'
+          leftBtnLink=''
+          rightBtnTxt=''
+          rightBtnLink=''
+          twoButtons=''
+          id='solarPanel'
         />
       </div>
     </div>

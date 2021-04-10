@@ -1,7 +1,7 @@
 .header {
   display: flex;
   background-color: transparent;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   position: fixed;
   min-height: 5vh;
@@ -10,6 +10,17 @@
   margin: 0 96px;
   top: 0;
   z-index: 100;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.header a {
+  text-decoration: none;
+  color: black;
 }
 
 .header__logo img {
@@ -42,29 +53,96 @@
   display: none;
 }
 
+.navBurger {
+  display: none;
+}
+
 @media only screen and (max-width: 1024px) {
+  nav {
+    display: none;
+    transform: translateX(-200%);
+  }
+
   .header {
+    margin: 0;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  nav.shown {
     display: flex;
     margin: 0;
-    width: 100vw;
-    padding: 0 2rem;
+    flex-direction: column;
+    height: 100vh;
+    width: 50vw;
+    background-color: white;
+    align-items: center;
+    justify-content: space-around;
+    animation: transform 0.3s forwards;
   }
 
   .header__center {
-    display: none;
+    flex: none;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-evenly;
+    align-items: center;
   }
 
   .header__logo {
-    flex: 2;
-  }
-
-  .header__right {
-    display: none;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
   }
 
   .burger {
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px;
+  }
+
+  .burger.shown {
+    display: none;
+  }
+
+  .navBurger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navBurger:hover {
+    cursor: pointer;
+  }
+
+  .burger:hover {
+    cursor: pointer;
+  }
+
+  .header__right {
+    display: flex;
     flex: 1;
-    justify-content: flex-end;
+    text-transform: uppercase;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .header__right {
+    display: flex;
+    flex: 1;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+  }
+}
+
+@keyframes transform {
+  from {
+    transform: translate(-200%);
+  }
+  to {
+    transform: translate(0%);
   }
 }
